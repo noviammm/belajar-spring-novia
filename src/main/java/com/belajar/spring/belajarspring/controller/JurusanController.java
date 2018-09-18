@@ -20,7 +20,7 @@ public class JurusanController {
     @PostMapping(value = "/jurusan")
     public String save(@RequestBody Jurusan jurusan){
         Jurusan data = service.save(jurusan);
-        if (data.getIdJurusan() == 0){
+        if (data.getId() == 0){
             return "Gagal insert data";
         }else {
             return "Insert data berhasil";
@@ -30,7 +30,7 @@ public class JurusanController {
     @PutMapping(value = "/jurusan")
     public String update(@RequestBody Jurusan jurusan){
         Jurusan data = service.update(jurusan);
-        if(data.getIdJurusan() == 0){
+        if(data.getId() == 0){
             return "Gagal update data";
         }else {
             return "Update data berhasil";

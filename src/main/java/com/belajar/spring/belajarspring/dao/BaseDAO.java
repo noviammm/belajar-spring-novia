@@ -11,13 +11,13 @@ public interface BaseDAO<T> {
 
     List<T> find();
 
-    T findByIdFakultas(int idFakultas);
+    T findById(int id);
 
-    T findByIdJurusan(int idJurusan);
-
-    T findByIdMatakuliah(int idMatkul);
-
-    T findByIdMahasiswa(int npmMhs);
-
-    T findByIdKrs(int idKrs);
+//    T findByIdJurusan(int idJurusan);
+//
+//    T findByIdMatakuliah(int idMatkul);
+//
+//    T findByIdMahasiswa(int npmMhs);
+//
+//    T findByIdKrs(int idKrs);
 }

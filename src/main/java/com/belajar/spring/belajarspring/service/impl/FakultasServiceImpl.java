@@ -36,27 +36,27 @@ public class FakultasServiceImpl implements FakultasService {
     }
 
     @Override
-    public Fakultas findByIdFakultas(int idFakultas) {
+    public Fakultas findById(int id) {
         return null;
     }
 
-    @Override
-    public Fakultas findByIdJurusan(int idJurusan) {
-        return null;
-    }
-
-    @Override
-    public Fakultas findByIdMatakuliah(int idMatkul) {
-        return null;
-    }
-
-    @Override
-    public Fakultas findByIdMahasiswa(int npmMhs) {
-        return null;
-    }
-
-    @Override
-    public Fakultas findByIdKrs(int idKrs) {
-        return null;
-    }
+//    @Override
+//    public Fakultas findByIdJurusan(int idJurusan) {
+//        return null;
+//    }
+//
+//    @Override
+//    public Fakultas findByIdMatakuliah(int idMatkul) {
+//        return null;
+//    }
+//
+//    @Override
+//    public Fakultas findByIdMahasiswa(int npmMhs) {
+//        return null;
+//    }
+//
+//    @Override
+//    public Fakultas findByIdKrs(int idKrs) {
+//        return null;
+//    }
 }

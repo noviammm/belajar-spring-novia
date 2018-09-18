@@ -22,17 +22,17 @@ public class MatakuliahDAOImpl implements MatakuliahDAO {
 
     @Override
     public Matakuliah save(Matakuliah param){
-        String sql = "INSERT INTO " + Table.TABLE_MATAKULIAH + " (nama_matkul, sks_matkul) VALUES (?, ?)";
+        String sql = "INSERT INTO " + Table.TABLE_MATAKULIAH + " (nama, sks) VALUES (?, ?)";
 
         final KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(con -> {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, param.getNamaMatkul());
-            ps.setInt(2, param.getSksMatkul());
+            ps.setString(1, param.getNama());
+            ps.setInt(2, param.getSks());
             return ps;
         }, keyHolder);
 
-        param.setIdMatkul(Objects.requireNonNull(keyHolder.getKey()).intValue());
+        param.setId(Objects.requireNonNull(keyHolder.getKey()).intValue());
         return param;
     }
 
@@ -55,28 +55,7 @@ public class MatakuliahDAOImpl implements MatakuliahDAO {
     }
 
     @Override
-    public Matakuliah findByIdFakultas(int idFakultas) {
+    public Matakuliah findById(int id) {
         return null;
     }
-
-    @Override
-    public Matakuliah findByIdJurusan(int idJurusan) {
-        return null;
-    }
-
-    @Override
-    public Matakuliah findByIdMatakuliah(int idMatkul) {
-        return null;
-    }
-
-    @Override
-    public Matakuliah findByIdMahasiswa(int npmMhs) {
-        return null;
-    }
-
-    @Override
-    public Matakuliah findByIdKrs(int idkrs) {
-        return null;
-    }
-
 }

@@ -35,27 +35,7 @@ public class MatakuliahServiceImpl implements MatakuliahService {
     }
 
     @Override
-    public Matakuliah findByIdJurusan(int idJurusan) {
-        return null;
-    }
-
-    @Override
-    public Matakuliah findByIdFakultas(int idFakultas) {
-        return null;
-    }
-
-    @Override
-    public Matakuliah findByIdMatakuliah(int idMatkul) {
-        return null;
-    }
-
-    @Override
-    public Matakuliah findByIdMahasiswa(int npmMhs) {
-        return null;
-    }
-
-    @Override
-    public Matakuliah findByIdKrs(int idKrs) {
+    public Matakuliah findById(int id) {
         return null;
     }
 }

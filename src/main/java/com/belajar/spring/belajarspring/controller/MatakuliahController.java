@@ -20,7 +20,7 @@ public class MatakuliahController {
     @PostMapping(value = "/matakuliah")
     public String save(@RequestBody Matakuliah matakuliah){
         Matakuliah data = service.save(matakuliah);
-        if (data.getIdMatkul() == 0){
+        if (data.getId() == 0){
             return "Gagal insert data";
         }else {
             return "Insert data berhasil";
@@ -30,7 +30,7 @@ public class MatakuliahController {
     @PutMapping(value = "/matakuliah")
     public String update(@RequestBody Matakuliah matakuliah){
         Matakuliah data = service.update(matakuliah);
-        if(data.getIdMatkul() == 0){
+        if(data.getId() == 0){
             return "Gagal update data";
         }else {
             return "Update data berhasil";

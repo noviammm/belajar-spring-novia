@@ -35,27 +35,9 @@ public class MahasiswaServiceImpl implements MahasiswaService {
     }
 
     @Override
-    public Mahasiswa findByIdJurusan(int idJurusan) {
+    public Mahasiswa findById(int id) {
         return null;
     }
 
-    @Override
-    public Mahasiswa findByIdFakultas(int idFakultas) {
-        return null;
-    }
 
-    @Override
-    public Mahasiswa findByIdMatakuliah(int idMatkul) {
-        return null;
-    }
-
-    @Override
-    public Mahasiswa findByIdMahasiswa(int npmMhs) {
-        return null;
-    }
-
-    @Override
-    public Mahasiswa findByIdKrs(int idKrs) {
-        return null;
-    }
 }

@@ -12,13 +12,13 @@ public interface BaseService<T> {
 
     List<T> find();
 
-    T findByIdFakultas(int idFakultas);
-
-    T findByIdJurusan(int idJurusan);
-
-    T findByIdMatakuliah(int idMatkul);
-
-    T findByIdMahasiswa(int npmMhs);
-
-    T findByIdKrs(int idKrs);
+    T findById(int id);
+//
+//    T findByIdJurusan(int idJurusan);
+//
+//    T findByIdMatakuliah(int idMatkul);
+//
+//    T findByIdMahasiswa(int npmMhs);
+//
+//    T findByIdKrs(int idKrs);
 }

@@ -2,59 +2,59 @@ package com.belajar.spring.belajarspring.entity;
 
 public class Matakuliah {
 
-    private int idMatkul;
-    private String namaMatkul;
-    private int sksMatkul;
+    private int id;
+    private String nama;
+    private int sks;
 
     public Matakuliah(){
 
     }
 
-    public Matakuliah(int idMatkul){
-        this.idMatkul = idMatkul;
+    public Matakuliah(int id){
+        this.id = id;
     }
 
-    public Matakuliah(String namaMatkul, int sksMatkul){
-        this.namaMatkul = namaMatkul;
-        this.sksMatkul = sksMatkul;
+    public Matakuliah(String nama, int sks){
+        this.nama = nama;
+        this.sks = sks;
     }
 
-    public Matakuliah(int idMatkul, String namaMatkul, int sksMatkul){
-        this.idMatkul = idMatkul;
-        this.namaMatkul = namaMatkul;
-        this.sksMatkul = sksMatkul;
+    public Matakuliah(int id, String nama, int sks){
+        this.id = id;
+        this.nama = nama;
+        this.sks = sks;
     }
 
-    public int getIdMatkul() {
-        return idMatkul;
+    public int getId() {
+        return id;
     }
 
-    public void setIdMatkul(int idMatkul) {
-        this.idMatkul = idMatkul;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getNamaMatkul() {
-        return namaMatkul;
+    public String getNama() {
+        return nama;
     }
 
-    public void setNamaMatkul(String namaMatkul) {
-        this.namaMatkul = namaMatkul;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
-    public int getSksMatkul() {
-        return sksMatkul;
+    public int getSks() {
+        return sks;
     }
 
-    public void setSksMatkul(int sksMatkul) {
-        this.sksMatkul = sksMatkul;
+    public void setSks(int sks) {
+        this.sks = sks;
     }
 
     @Override
     public String toString() {
         return "Matakuliah{" +
-                "idMatkul=" + idMatkul +
-                ", namaMatkul='" + namaMatkul + '\'' +
-                ", sksMatkul='" + sksMatkul + '\'' +
+                "id=" + id +
+                ", nama='" + nama + '\'' +
+                ", sks='" + sks + '\'' +
                 '}';
     }
 }

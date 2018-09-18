@@ -23,16 +23,16 @@ public class FakultasDAOImpl implements FakultasDAO {
 //    INSERT INTO tbl_fakultas (nama_fakultas) VALUES ("FT")
     @Override
     public Fakultas save(Fakultas param){
-        String sql = "INSERT INTO " + Table.TABLE_FAKULTAS + " (nama_fakultas) VALUES (?)";
+        String sql = "INSERT INTO " + Table.TABLE_FAKULTAS + " (nama) VALUES (?)";
 
         final KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(con -> {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, param.getNamaFakultas());
+            ps.setString(1, param.getNama());
             return ps;
         }, keyHolder);
 
-        param.setIdFakultas(Objects.requireNonNull(keyHolder.getKey()).intValue());
+        param.setId(Objects.requireNonNull(keyHolder.getKey()).intValue());
         return param;
     }
 //    UPDATE tbl_fakultas SET nama_fakultas ="FIPPS" WHERE id_fakultas = "3"
@@ -43,12 +43,12 @@ public class FakultasDAOImpl implements FakultasDAO {
         final KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update (con -> {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, param.getNamaFakultas());
-            ps.setInt(2, param.getIdFakultas());
+            ps.setString(1, param.getNama());
+            ps.setInt(2, param.getId());
             return ps;
         }, keyHolder);
 
-        param.setIdFakultas(Objects.requireNonNull(keyHolder.getKey()).intValue());
+        param.setId(Objects.requireNonNull(keyHolder.getKey()).intValue());
         return param;
     }
 
@@ -62,34 +62,13 @@ public class FakultasDAOImpl implements FakultasDAO {
         String sql = "SELECT * FROM " + Table.TABLE_FAKULTAS;
 
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Fakultas.class));
-
     }
 
     @Override
-    public Fakultas findByIdFakultas(int idFakultas) {
-        String sql = "SELECT * FROM " + Table.TABLE_FAKULTAS + " WHERE (id_fakultas)= ?";
+    public Fakultas findById(int id) {
         return null;
     }
 
-    @Override
-    public Fakultas findByIdJurusan(int idJurusan) {
-        return null;
-    }
-
-    @Override
-    public Fakultas findByIdMatakuliah(int idMatkul) {
-        return null;
-    }
-
-    @Override
-    public Fakultas findByIdMahasiswa(int npmMhs) {
-        return null;
-    }
-
-    @Override
-    public Fakultas findByIdKrs(int idkrs) {
-        return null;
-    }
 
 
 

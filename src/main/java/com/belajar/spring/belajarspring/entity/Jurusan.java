@@ -4,33 +4,34 @@ import java.io.Serializable;
 
 public class Jurusan implements Serializable {
 
-    private int idJurusan;
+    private int id;
 
     private int idFakultas;
 
-    private String namaJurusan;
+    private String nama;
+
+    private Fakultas fakultas; //panggil objek fakultas buat join tabel karena butuh
 
     public Jurusan(){
-
     }
 
-    public Jurusan(int idJurusan, int idFakultas){
-        this.idJurusan = idJurusan;
+    public Jurusan(int id, int idFakultas){
+        this.id = id;
         this.idFakultas=idFakultas;
     }
 
-    public Jurusan(int idJurusan, int idFakultas, String namaJurusan){
+    public Jurusan(int id, int idFakultas, String nama){
+        this.id = id;
         this.idFakultas=idFakultas;
-        this.idJurusan=idJurusan;
-        this.namaJurusan=namaJurusan;
+        this.nama = nama;
     }
 
-    public int getIdJurusan() {
-        return idJurusan;
+    public int getId() {
+        return id;
     }
 
-    public void setIdJurusan(int idJurusan) {
-        this.idJurusan = idJurusan;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getIdFakultas() {
@@ -41,20 +42,30 @@ public class Jurusan implements Serializable {
         this.idFakultas = idFakultas;
     }
 
-    public String getNamaJurusan() {
-        return namaJurusan;
+    public String getNama() {
+        return nama;
     }
 
-    public void setNamaJurusan(String namaJurusan) {
-        this.namaJurusan = namaJurusan;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
+
+    //nambah jugaa
+    public Fakultas getFakultas() {
+        return fakultas;
+    }
+
+    public void setFakultas(Fakultas fakultas) {
+        this.fakultas = fakultas;
+    }
+    //sampe sini
 
     @Override
     public String toString() {
         return "Jurusan{" +
-                "idJurusan=" + idJurusan +
+                "id=" + id +
                 "idFakultas=" + idFakultas + '\'' +
-                ", namaJurusan='" + namaJurusan + '\'' +
+                ", nama='" + nama + '\'' +
                 '}';
     }
 }

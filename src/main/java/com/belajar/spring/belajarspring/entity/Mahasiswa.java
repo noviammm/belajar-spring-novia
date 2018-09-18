@@ -5,109 +5,111 @@ import java.sql.Date;
 
 public class Mahasiswa implements Serializable {
 
-    private int npmMhs;
+    private int id;
 
-    private String namaMhs;
+    private String nama;
 
-    private String tempatLahir;
+    private String tempat;
 
-    private Date tglLahir;
+    private Date tgl;
 
-    private String alamatMhs;
+    private String alamat;
 
-    private String ayahMhs;
+    private String ayah;
 
-    private String ibuMhs;
+    private String ibu;
 
     private int idJurusan;
+
+    private Jurusan jurusan;
 
     public Mahasiswa(){
 
     }
 
-    public Mahasiswa(int npmMhs){
-        this.npmMhs = npmMhs;
+    public Mahasiswa(int id){
+        this.id = id;
     }
 
-    public Mahasiswa(String namaMhs, String tempatLahir,Date tglLahir,
-                     String alamatMhs, String ayahMhs, String ibuMhs,
+    public Mahasiswa(String nama, String tempat, Date tgl,
+                     String alamat, String ayah, String ibu,
                      int idJurusan) {
-        this.namaMhs = namaMhs;
-        this.tempatLahir = tempatLahir;
-        this.tglLahir = tglLahir;
-        this.alamatMhs = alamatMhs;
-        this.ayahMhs = ayahMhs;
-        this.ibuMhs = ibuMhs;
+        this.nama = nama;
+        this.tempat = tempat;
+        this.tgl = tgl;
+        this.alamat = alamat;
+        this.ayah = ayah;
+        this.ibu = ibu;
         this.idJurusan = idJurusan;
     }
 
-    public Mahasiswa(int npmMhs, String namaMhs, String tempatLahir,Date tglLahir,
-                     String alamatMhs, String ayahMhs, String ibuMhs,
+    public Mahasiswa(int id, String nama, String tempat, Date tgl,
+                     String alamat, String ayah, String ibu,
                      int idJurusan) {
-        this.npmMhs = npmMhs;
-        this.namaMhs = namaMhs;
-        this.tempatLahir = tempatLahir;
-        this.tglLahir = tglLahir;
-        this.alamatMhs = alamatMhs;
-        this.ayahMhs = ayahMhs;
-        this.ibuMhs = ibuMhs;
+        this.id = id;
+        this.nama = nama;
+        this.tempat = tempat;
+        this.tgl = tgl;
+        this.alamat = alamat;
+        this.ayah = ayah;
+        this.ibu = ibu;
         this.idJurusan = idJurusan;
     }
 
-    public int getNpmMhs() {
-        return npmMhs;
+    public int getId() {
+        return id;
     }
 
-    public void setNpmMhs(int npmMhs) {
-        this.npmMhs = npmMhs;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getNamaMhs() {
-        return namaMhs;
+    public String getNama() {
+        return nama;
     }
 
-    public void setNamaMhs(String namaMhs) {
-        this.namaMhs = namaMhs;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
-    public String getTempatLahir() {
-        return tempatLahir;
+    public String getTempat() {
+        return tempat;
     }
 
-    public void setTempatLahir(String tempatLahir) {
-        this.tempatLahir = tempatLahir;
+    public void setTempat(String tempat) {
+        this.tempat = tempat;
     }
 
-    public Date getTglLahir() {
-        return tglLahir;
+    public Date getTgl() {
+        return tgl;
     }
 
-    public void setTglLahir(Date tglLahir) {
-        this.tglLahir = tglLahir;
+    public void setTgl(Date tgl) {
+        this.tgl = tgl;
     }
 
-    public String getAlamatMhs() {
-        return alamatMhs;
+    public String getAlamat() {
+        return alamat;
     }
 
-    public void setAlamatMhs(String alamatMhs) {
-        this.alamatMhs = alamatMhs;
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
     }
 
-    public String getAyahMhs() {
-        return ayahMhs;
+    public String getAyah() {
+        return ayah;
     }
 
-    public void setAyahMhs(String ayahMhs) {
-        this.ayahMhs = ayahMhs;
+    public void setAyah(String ayah) {
+        this.ayah = ayah;
     }
 
-    public String getIbuMhs() {
-        return ibuMhs;
+    public String getIbu() {
+        return ibu;
     }
 
-    public void setIbuMhs(String ibuMhs) {
-        this.ibuMhs = ibuMhs;
+    public void setIbu(String ibu) {
+        this.ibu = ibu;
     }
 
     public int getIdJurusan() {
@@ -118,16 +120,24 @@ public class Mahasiswa implements Serializable {
         this.idJurusan = idJurusan;
     }
 
+    public Jurusan getJurusan() {
+        return jurusan;
+    }
+
+    public void setJurusan(Jurusan jurusan) {
+        this.jurusan = jurusan;
+    }
+
     @Override
     public String toString() {
         return "Mahasiswa{" +
-                "npmMhs=" + npmMhs +
-                ", namaMhs='" + namaMhs + '\'' +
-                ", tempatLahir='" + tempatLahir + '\'' +
-                ", tglLahir='" + tglLahir + '\'' +
-                ", alamatMhs='" + alamatMhs + '\'' +
-                ", ayahMhs='" + ayahMhs + '\'' +
-                ", ibuMhs='" + ibuMhs + '\'' +
+                "id=" + id +
+                ", nama='" + nama + '\'' +
+                ", tempat='" + tempat + '\'' +
+                ", tgl='" + tgl + '\'' +
+                ", alamat='" + alamat + '\'' +
+                ", ayah='" + ayah + '\'' +
+                ", ibu='" + ibu + '\'' +
                 ", idJurusan='" + idJurusan + '\'' +
                 '}';
     }
